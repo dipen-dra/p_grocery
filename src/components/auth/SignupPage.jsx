@@ -35,13 +35,13 @@ const SignupPage = () => {
 
     registerUser(formData, {
       onSuccess: (res) => {
-        toast.success((res?.message || 'Signup successful!') + ' You can now log in.');
+        // toast.success((res?.message || 'Signup successful!') + ' You can now log in.');
         setFormData({ fullName: '', email: '', password: '' });
         navigate('login');
         setIsSubmitting(false);
       },
       onError: (err) => {
-        toast.error(err?.message || 'Signup failed. Please try again.');
+        // toast.error(err?.message || 'Signup failed. Please try again.');
         setIsSubmitting(false);
       },
     });

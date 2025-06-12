@@ -27,13 +27,13 @@ const LoginPage = () => {
 
     loginUser(formData, {
       onSuccess: (res) => {
-        toast.success(res?.message || 'Login successful!');
+        // toast.success(res?.message || 'Login successful!');
         setFormData({ email: '', password: '' });
         navigate('home'); // or dashboard, adjust as needed
         setIsSubmitting(false);
       },
       onError: (err) => {
-        toast.error(err?.message || 'Login failed. Please try again.');
+        // toast.error(err?.message || 'Login failed. Please try again.');
         setIsSubmitting(false);
       },
     });

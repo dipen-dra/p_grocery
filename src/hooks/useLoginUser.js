@@ -11,7 +11,7 @@ export const useLoginUser = () => {
   return useMutation({
     mutationFn: loginUserService,
     onSuccess: (data) => {
-    //   toast.success('Login successful!');
+      toast.success('Login successful!');
       localStorage.setItem('token', data.token);
       setTimeout(() => {
         // You might want to navigate to a dashboard or home page
